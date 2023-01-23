@@ -61,7 +61,7 @@ public class RadioTest {
     }
 
     @Test
-    public void stationSetting(){
+    public void stationSetting() {
         Radio service = new Radio();
 
         service.setRadioStationNumber(6);
@@ -74,7 +74,7 @@ public class RadioTest {
     }
 
     @Test
-    public void stationMaxSetting(){
+    public void stationMaxSetting() {
         Radio service = new Radio();
 
         service.setRadioStationNumber(9);
@@ -87,7 +87,7 @@ public class RadioTest {
     }
 
     @Test
-    public void settingNearestMaxStation(){
+    public void settingNearestMaxStation() {
         Radio service = new Radio();
 
         service.setRadioStationNumber(8);
@@ -100,7 +100,7 @@ public class RadioTest {
     }
 
     @Test
-    public void settingNearestMinStation(){
+    public void settingNearestMinStation() {
         Radio service = new Radio();
 
         service.setRadioStationNumber(1);
@@ -113,7 +113,7 @@ public class RadioTest {
     }
 
     @Test
-    public void settingMinStation(){
+    public void settingMinStation() {
         Radio service = new Radio();
 
         service.setRadioStationNumber(0);
@@ -126,7 +126,7 @@ public class RadioTest {
     }
 
     @Test
-    public void settingBadMinStation(){
+    public void settingBadMinStation() {
         Radio service = new Radio();
 
         service.setRadioStationNumber(-1);
@@ -139,7 +139,7 @@ public class RadioTest {
     }
 
     @Test
-    public void settingBadMaxStation(){
+    public void settingBadMaxStation() {
         Radio service = new Radio();
 
         service.setRadioStationNumber(10);
