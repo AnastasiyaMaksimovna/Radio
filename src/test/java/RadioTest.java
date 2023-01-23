@@ -61,6 +61,97 @@ public class RadioTest {
     }
 
     @Test
+    public void stationSetting(){
+        Radio service = new Radio();
+
+        service.setRadioStationNumber(6);
+        service.getRadioStationNumber();
+
+        int expectedStation = 6;
+        int actualStation = service.getRadioStationNumber();
+
+        Assertions.assertEquals(expectedStation, actualStation);
+    }
+
+    @Test
+    public void stationMaxSetting(){
+        Radio service = new Radio();
+
+        service.setRadioStationNumber(9);
+        service.getRadioStationNumber();
+
+        int expectedStation = 9;
+        int actualStation = service.getRadioStationNumber();
+
+        Assertions.assertEquals(expectedStation, actualStation);
+    }
+
+    @Test
+    public void settingNearestMaxStation(){
+        Radio service = new Radio();
+
+        service.setRadioStationNumber(8);
+        service.getRadioStationNumber();
+
+        int expectedStation = 8;
+        int actualStation = service.getRadioStationNumber();
+
+        Assertions.assertEquals(expectedStation, actualStation);
+    }
+
+    @Test
+    public void settingNearestMinStation(){
+        Radio service = new Radio();
+
+        service.setRadioStationNumber(1);
+        service.getRadioStationNumber();
+
+        int expectedStation = 1;
+        int actualStation = service.getRadioStationNumber();
+
+        Assertions.assertEquals(expectedStation, actualStation);
+    }
+
+    @Test
+    public void settingMinStation(){
+        Radio service = new Radio();
+
+        service.setRadioStationNumber(0);
+        service.getRadioStationNumber();
+
+        int expectedStation = 0;
+        int actualStation = service.getRadioStationNumber();
+
+        Assertions.assertEquals(expectedStation, actualStation);
+    }
+
+    @Test
+    public void settingBadMinStation(){
+        Radio service = new Radio();
+
+        service.setRadioStationNumber(-1);
+        service.getRadioStationNumber();
+
+        int expectedStation = 0;
+        int actualStation = service.getRadioStationNumber();
+
+        Assertions.assertEquals(expectedStation, actualStation);
+    }
+
+    @Test
+    public void settingBadMaxStation(){
+        Radio service = new Radio();
+
+        service.setRadioStationNumber(10);
+        service.getRadioStationNumber();
+
+        int expectedStation = 0;
+        int actualStation = service.getRadioStationNumber();
+
+        Assertions.assertEquals(expectedStation, actualStation);
+    }
+
+    @Test
     public void maxSoundLimits() {
         Radio service = new Radio();
 

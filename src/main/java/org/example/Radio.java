@@ -22,13 +22,11 @@ public class Radio {
     }
 
     public void setRadioStationNumber(int newRadioStationNumber) {
-        if (newRadioStationNumber > 9) {
-            return;
+        if (newRadioStationNumber <= 9) {
+            if (newRadioStationNumber >= 0) {
+                radioStationNumber = newRadioStationNumber;
+            }
         }
-        if (newRadioStationNumber < 0) {
-            return;
-        }
-        radioStationNumber = newRadioStationNumber;
     }
 
     public int getRadioStationNumber() {
