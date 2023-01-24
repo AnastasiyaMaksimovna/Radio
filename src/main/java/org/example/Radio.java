@@ -3,27 +3,40 @@ package org.example;
 public class Radio {
     private int radioStationNumber;
     private int Volume = 0;
+    private int quantityStation;
+    private int minStanion = 0;
+
+    public Radio (int quantityStation){
+        this.quantityStation = quantityStation;
+    }
+    public Radio (){
+        this.quantityStation = 10;
+    }
+
+    public int getQuantityStation(){
+        return quantityStation;
+    }
 
 
     public void next() {
-        if (radioStationNumber < 9) {
+        if (radioStationNumber < quantityStation - 1) {
             radioStationNumber = radioStationNumber + 1;
         } else {
-            radioStationNumber = 0;
+            radioStationNumber = minStanion;
         }
     }
 
     public void prev() {
-        if (radioStationNumber > 0) {
+        if (radioStationNumber > minStanion) {
             radioStationNumber = radioStationNumber - 1;
         } else {
-            radioStationNumber = 9;
+            radioStationNumber = quantityStation - 1;
         }
     }
 
     public void setRadioStationNumber(int newRadioStationNumber) {
-        if (newRadioStationNumber <= 9) {
-            if (newRadioStationNumber >= 0) {
+        if (newRadioStationNumber <= quantityStation - 1) {
+            if (newRadioStationNumber >= minStanion) {
                 radioStationNumber = newRadioStationNumber;
             }
         }
@@ -38,7 +51,7 @@ public class Radio {
     }
 
     public void increaseVolume() {
-        if (Volume < 10) {
+        if (Volume < 100) {
             Volume = Volume + 1;
         }
     }
