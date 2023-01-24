@@ -152,15 +152,35 @@ public class RadioTest {
     }
 
     @Test
+    public void customQuantityStationMin() {
+        Radio service = new Radio(0);
+
+        int expectedStation = 0;
+        int actualStation = service.getQuantityStation();
+
+        Assertions.assertEquals(expectedStation, actualStation);
+    }
+
+    @Test
+    public void customQuantityStation() {
+        Radio service = new Radio(100);
+
+        int expectedStation = 100;
+        int actualStation = service.getQuantityStation();
+
+        Assertions.assertEquals(expectedStation, actualStation);
+    }
+
+    @Test
     public void maxSoundLimits() {
         Radio service = new Radio();
 
-        for (int i = 0; i <= 10; i = i + 1) {
+        for (int i = 0; i <= 100; i = i + 1) {
             service.increaseVolume();
         }
         service.getVolume();
 
-        int expectedVolume = 10;
+        int expectedVolume = 100;
         int actualVolume = service.getVolume();
     }
 
