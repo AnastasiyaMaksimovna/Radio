@@ -6,14 +6,15 @@ public class Radio {
     private int quantityStation;
     private int minStanion = 0;
 
-    public Radio (int quantityStation){
+    public Radio(int quantityStation) {
         this.quantityStation = quantityStation;
     }
-    public Radio (){
+
+    public Radio() {
         this.quantityStation = 10;
     }
 
-    public int getQuantityStation(){
+    public int getQuantityStation() {
         return quantityStation;
     }
 

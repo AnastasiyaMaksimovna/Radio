@@ -152,23 +152,23 @@ public class RadioTest {
     }
 
     @Test
-    public void customQuantityStationMin(){
+    public void customQuantityStationMin() {
         Radio service = new Radio(0);
 
         int expectedStation = 0;
         int actualStation = service.getQuantityStation();
 
-        Assertions.assertEquals(expectedStation,actualStation);
+        Assertions.assertEquals(expectedStation, actualStation);
     }
 
     @Test
-    public void customQuantityStation(){
+    public void customQuantityStation() {
         Radio service = new Radio(100);
 
         int expectedStation = 100;
         int actualStation = service.getQuantityStation();
 
-        Assertions.assertEquals(expectedStation,actualStation);
+        Assertions.assertEquals(expectedStation, actualStation);
     }
 
     @Test
